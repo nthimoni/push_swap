@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 17:35:20 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/27 22:42:17 by nthimoni         ###   ########.fr       */
+/*   Created: 2022/01/27 22:34:21 by nthimoni          #+#    #+#             */
+/*   Updated: 2022/01/27 22:42:59 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
-#include "parse.h"
-#include "error.h"
 
-
-void	print(int a)
+void	error_msg(char	*msg, t_list *a, t_list *b)
 {
-	ft_printf("%d\n", a);
-}
-int main(int argc, char *argv[])
-{
-	t_list	*a_stack;
-	t_list	*b_stack;
-
-	a_stack = NULL;
-	b_stack = NULL;
-	if (parse(&a_stack, argc, argv) != 0)
-		error_msg("Error during parsing", a_stack, b_stack);
-	ft_lstiter(a_stack, print);
-	ft_lstclear(&a_stack, NULL);
-	ft_lstclear(&b_stack, NULL);
+	if (msg)
+		ft_printf("%s\n", msg);
+	if (a)
+		ft_lstclear(&a, NULL);
+	if (b)
+		ft_lstclear(&b, NULL);
+	exit(-1);
 }

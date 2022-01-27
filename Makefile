@@ -6,7 +6,8 @@ FTINC = $(FTPATH)include/
 LIBFT = $(FTPATH)libft.a
 ######################################################################
 SRCS = main.c\
-		parse.c
+		parse.c\
+		error.c
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.c=.o))
 #####################################################################
 CC = clang -g
