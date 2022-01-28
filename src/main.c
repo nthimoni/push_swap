@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:35:20 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/28 20:43:32 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/01/29 00:37:06 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,31 @@ int main(int argc, char *argv[])
 	a = NULL;
 	b = NULL;
 	if (parse(&a, argc, argv) != 0)
-		error_msg("Error during parsing", a, b);
+		error_msg("Erroor during parsing", a, b);
 	print_st(a, b);
-	p(&a, &b, "pb");
+	rotate(&a, &b, "rr");
 	print_st(a, b);
-	p(&a, &b, "pb");
+	push(&a, &b, "pb");
 	print_st(a, b);
-	p(&a, &b, "pb");
+	push(&a, &b, "pb");
 	print_st(a, b);
-	p(&b, &a, "pa");
+	push(&a, &b, "pb");
 	print_st(a, b);
-	ss(a, b, "ss");
+	push(&b, &a, "pa");
 	print_st(a, b);
-	ss(a, NULL, "sa");
+	swap(a, b, "ss");
+	print_st(a, b);
+	swap(a, NULL, "sa");
+	print_st(a, b);
+	rotate(&a, NULL, "ra");
+	print_st(a, b);
+	rotate(&a, &b, "rr");
+	print_st(a, b);
+	rotate(&a, &b, "rr");
+	print_st(a, b);
+	push(&b, &a, "pa");
+	print_st(a, b);
+	rotate(&a, &b, "rr");
 	print_st(a, b);
 	ft_lstclear(&a, NULL);
 	ft_lstclear(&b, NULL);

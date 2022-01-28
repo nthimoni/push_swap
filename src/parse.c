@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:55:05 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/28 16:57:53 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/01/28 23:37:03 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,21 @@ static int is_valid(char *s)
 	return (1);
 }
 
+static int	check_duplicates(int argc, char *argv[])
+{
+	int	ret;
+
+	ret = ft_atoi(argv[argc]);
+	argc++;
+	while (argv[argc])
+	{
+		if (ft_atoi(argv[argc]) == ret)
+			return (0);
+		argc++;
+	}
+	return (1);
+}
+
 int	parse(t_list **a, int argc, char *argv[])
 {
 	t_list	*elem;
@@ -45,6 +60,8 @@ int	parse(t_list **a, int argc, char *argv[])
 	while (argc > 0)
 	{
 		if (!is_valid(argv[argc]))
+			return (-1);
+		if (!check_duplicates(argc, argv))
 			return (-1);
 		elem = ft_lstnew(ft_atoi(argv[argc]));
 		if (!elem)
