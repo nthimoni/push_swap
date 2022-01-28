@@ -7,7 +7,8 @@ LIBFT = $(FTPATH)libft.a
 ######################################################################
 SRCS = main.c\
 		parse.c\
-		error.c
+		error.c\
+		operations.c
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.c=.o))
 #####################################################################
 CC = clang -g

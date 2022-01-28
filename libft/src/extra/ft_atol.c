@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   atol.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 20:22:03 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/28 16:55:28 by nthimoni         ###   ########.fr       */
+/*   Created: 2022/01/28 16:54:41 by nthimoni          #+#    #+#             */
+/*   Updated: 2022/01/28 16:55:49 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long int	ft_atol(const char *str)
 {
-	int	signe;
-	int	ret;
-	int	i;
+	int			signe;
+	long int	ret;
+	int			i;
 
 	i = 0;
 	signe = 1;

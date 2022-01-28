@@ -6,16 +6,18 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:55:05 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/27 22:47:26 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:57:53 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "constantes.h"
 #include <limits.h>
 
 static int is_valid(char *s)
 {
 	int		i;
+	size_t	len;
 
 	i = 0;
 	while (s[i])
@@ -25,6 +27,13 @@ static int is_valid(char *s)
 				return (0);
 		i++;
 	}
+	len = ft_strlen(s);
+	if (len > MAX_LEN)
+		return (0);
+	if (ft_atol(s) > INT_MAX)
+		return (0);
+	if (ft_atol(s) < INT_MIN)
+		return (0);
 	return (1);
 }
 

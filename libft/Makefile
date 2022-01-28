@@ -17,7 +17,8 @@ EXTFILES = get_next_line_bonus.c\
 			ft_printf/print_di.c\
 			ft_printf/print_p.c\
 			ft_printf/print_xX.c\
-			ft_printf/print_percent.c
+			ft_printf/print_percent.c\
+			ft_atol.c
 
 MANFILES = ft_isalpha.c\
 			ft_isdigit.c\
