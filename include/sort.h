@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   sort.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 15:23:08 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/31 22:27:14 by nthimoni         ###   ########.fr       */
+/*   Created: 2022/01/31 21:32:35 by nthimoni          #+#    #+#             */
+/*   Updated: 2022/02/01 01:11:17 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SORT_H
+# define SORT_H
+
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(int))
-{
-	t_list	*current;
-	t_list	*next;
+void	sort_five(t_list **a, t_list **b, size_t len);
 
-	current = *lst;
-	while (current)
-	{
-		next = current->next;
-		if (del)
-			(*del)(current->content);
-		free(current);
-		current = next;
-	}
-	*lst = NULL;
-}
+#endif
