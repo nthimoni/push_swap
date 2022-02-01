@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.h                                       :+:      :+:    :+:   */
+/*   buffer.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/28 18:19:13 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 03:53:26 by nthimoni         ###   ########.fr       */
+/*   Created: 2022/02/01 03:16:58 by nthimoni          #+#    #+#             */
+/*   Updated: 2022/02/01 05:03:54 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OPERATIONS_H
-# define OPERATIONS_H
+#ifndef BUFFER_H
+# define BUFFER_H
 
-#include "libft.h"
+# define SWAP_BUF_SIZE 10
 
-void	swap(t_list *a, t_list *b, int op);
-void	push(t_list **from, t_list **tpush, int op);
-void	rotate(t_list **s1, t_list **s2, int op);
-void	rev_rotate(t_list **s1, t_list **s2, int op);
-int		find_min(t_list *s);
-int		find_max(t_list *s);
-void	put_nb_top_a(t_list **s, int a);
-int		get_sup(t_list *s, int a);
+# define FLUSH -2
+# define SA 1
+# define SB 2
+# define SS 4
+# define RA 8
+# define RB 16
+# define RR 32
+# define PA 64
+# define PB 128
+# define RRA 256
+# define RRB 512
+# define RRR 1024
+
+void	put_buff(unsigned int op);
 
 #endif

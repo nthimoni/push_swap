@@ -6,13 +6,14 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:37:26 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/29 19:29:03 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/01 03:55:16 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
+#include "buffer.h" 
 
-void	swap(t_list *s1, t_list *s2, char *msg)
+void	swap(t_list *s1, t_list *s2, int op)
 {
 	int	tmp;
 
@@ -23,23 +24,22 @@ void	swap(t_list *s1, t_list *s2, char *msg)
 		s1->next->content = tmp;
 	}
 	if (s2)
-		swap(s2, NULL, msg);
-	if (msg && !s2)
-		ft_printf("%s\n", msg);
+		swap(s2, NULL, op);
+	if (!s2)
+		put_buff(op);
 }
 
-void	push(t_list **from, t_list **to, char *msg)
+void	push(t_list **from, t_list **to, int op)
 {
 	t_list *tmp;
 
 	tmp = (*from)->next;
 	ft_lstadd_front(to, *from);
 	*from = tmp;
-	if (msg)
-		ft_printf("%s\n", msg);
+	put_buff(op);
 }
 
-void	rev_rotate(t_list **s1, t_list **s2, char *msg)
+void	rev_rotate(t_list **s1, t_list **s2, int op)
 {
 	t_list	**pre;
 	t_list	*last;
@@ -58,12 +58,12 @@ void	rev_rotate(t_list **s1, t_list **s2, char *msg)
 		*pre = NULL;
 	}
 	if (s2)
-		rev_rotate(s2, NULL, msg);
-	if (msg && !s2)
-		ft_printf("%s\n", msg);
+		rev_rotate(s2, NULL, op);
+	if (!s2)
+		put_buff(op);
 }
 
-void	rotate(t_list **s1, t_list **s2, char *msg)
+void	rotate(t_list **s1, t_list **s2, int op)
 {
 	t_list	*last;
 
@@ -75,7 +75,7 @@ void	rotate(t_list **s1, t_list **s2, char *msg)
 		last->next->next = NULL;
 	}
 	if (s2)
-		rotate(s2, NULL, msg);
-	if (msg && !s2)
-		ft_printf("%s\n", msg);
+		rotate(s2, NULL, op);
+	if (!s2)
+		put_buff(op);
 }

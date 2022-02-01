@@ -6,12 +6,13 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 22:53:21 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 02:24:53 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/01 03:54:43 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "operations.h"
+#include "buffer.h"
 
 int	find_max(t_list *s)
 {
@@ -58,10 +59,10 @@ void	put_nb_top_a(t_list **s, int a)
 	len = ft_lstsize(*s);
 	if (ind <= (len / 2) + (len % 2))
 		while ((*s)->content != a)
-			rotate(s, NULL, "ra");
+			rotate(s, NULL, RA);
 	else
 		while ((*s)->content != a)
-			rev_rotate(s, NULL, "rra");
+			rev_rotate(s, NULL, RRA);
 }
 
 int	get_sup(t_list *s, int a)

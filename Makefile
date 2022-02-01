@@ -8,6 +8,7 @@ LIBFT = $(FTPATH)libft.a
 SRCS = main.c\
 		parse.c\
 		error.c\
+		buffer.c\
 		sort_five.c\
 		adv_operations.c\
 		operations.c
