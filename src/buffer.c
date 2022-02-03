@@ -6,14 +6,14 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 02:40:56 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 05:07:02 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/01 17:31:18 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "buffer.h"
 
-static int	get_opti2(unsigned int sum)
+static int	get_opti2(int sum)
 {
 	if (sum == RB + RRB)
 		return (0);
@@ -33,7 +33,7 @@ static int	get_opti2(unsigned int sum)
 		return (-1);
 }
 
-static int	get_opti(unsigned int sum)
+static int	get_opti(int sum)
 {
 	if (sum == SA + SA)
 		return (0);
@@ -56,7 +56,7 @@ static int	get_opti(unsigned int sum)
 	return (get_opti2(sum));
 }
 
-static void	print_op(unsigned int a)
+static void	print_op(int a)
 {
 	if (a == SA)
 		ft_printf("sa\n");
@@ -82,7 +82,7 @@ static void	print_op(unsigned int a)
 		ft_printf("rrr\n");
 }
 
-void	opti_buf(unsigned int *buffer)
+void	opti_buf(int *buffer)
 {
 	int	i;
 	int opti;
@@ -110,12 +110,12 @@ void	opti_buf(unsigned int *buffer)
 	}
 }
 
-void	put_buff(unsigned int op)
+void	put_buff(int op)
 {
-	static unsigned int buffer[SWAP_BUF_SIZE];
-	int					i;
+	static int	buffer[SWAP_BUF_SIZE];
+	int			i;
 
-	if ((int)op == FLUSH)
+	if (op == FLUSH)
 	{
 		i = -1;
 		opti_buf(buffer);
@@ -130,11 +130,7 @@ void	put_buff(unsigned int op)
 	if (buffer[SWAP_BUF_SIZE - 1])
 		opti_buf(buffer);
 	else
-		return ;/*
-	if (opti > 0)
-		buffer[0] = opti;
-	else if (opti == 0)
-		ft_bzero(buffer, sizeof(unsigned int) * SWAP_BUF_SIZE);*/
+		return ;
 	if (buffer[SWAP_BUF_SIZE - 1])
 	{
 		print_op(buffer[0]);

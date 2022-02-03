@@ -6,14 +6,14 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 03:16:58 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 05:03:54 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/03 05:33:15 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUFFER_H
 # define BUFFER_H
 
-# define SWAP_BUF_SIZE 10
+# define SWAP_BUF_SIZE 300
 
 # define FLUSH -2
 # define SA 1
@@ -28,6 +28,14 @@
 # define RRB 512
 # define RRR 1024
 
-void	put_buff(unsigned int op);
+void	put_buff(int op);
+
+typedef struct s_rotbuf
+{
+	int	r_from;
+	int r_to;
+	int rr_from;
+	int rr_to;
+}	t_rotbuf;
 
 #endif

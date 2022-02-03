@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 20:45:34 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 04:18:42 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/01 16:50:32 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,11 @@ void	sort_five(t_list **a, t_list **b, size_t len)
 	{
 		put_nb_top_a(a, get_sup(*a, (*b)->content));
 		push(b, a, PA);
-		put_nb_top_a(a, get_sup(*a, (*b)->content));
-		push(b, a, PA);
+		if (len > 4)
+		{
+			put_nb_top_a(a, get_sup(*a, (*b)->content));
+			push(b, a, PA);
+		}
 		put_nb_top_a(a, find_min(*a));
 	}
 }

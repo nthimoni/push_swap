@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "/mnt/nfs/homes/nthimoni/Desktop/projects42/C/push_swap/push_swap",
-            "args": ["31", "82", "9","12","28"],
+            "args": ["`ruby -e \"puts (-50..50).to_a.shuffle.join(' ')\"`"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],

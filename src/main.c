@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:35:20 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 03:56:35 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:38:00 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,10 @@ int main(int argc, char *argv[])
 	len = ft_lstsize(a);
 	if (len == 2 && a->content > a->next->content)
 		swap(a, NULL, SA);
-	else if (len <= 5)
+	else if (len <= 5 && len >= 3)
 		sort_five(&a, &b, len);
+	else if (len > 5)
+		sort_more(&a, &b, len);
 	put_buff(FLUSH);
 	ft_lstclear(&a, NULL);
 	ft_lstclear(&b, NULL);	

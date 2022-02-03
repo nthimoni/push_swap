@@ -11,7 +11,10 @@ SRCS = main.c\
 		buffer.c\
 		sort_five.c\
 		adv_operations.c\
-		operations.c
+		operations.c\
+		sort_more.c\
+		insert_fastest.c\
+		chunk.c
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.c=.o))
 #####################################################################
 CC = clang -g

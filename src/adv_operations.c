@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 22:53:21 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 03:54:43 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:34:03 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,28 @@ void	put_nb_top_a(t_list **s, int a)
 	else
 		while ((*s)->content != a)
 			rev_rotate(s, NULL, RRA);
+}
+
+void	put_nb_top_b(t_list **s, int a)
+{
+	int		ind;
+	t_list	*tmp;
+	int		len;
+
+	ind = 1;
+	tmp = *s;
+	while (tmp->content != a)
+	{
+		tmp = tmp->next;
+		ind++;
+	}
+	len = ft_lstsize(*s);
+	if (ind <= (len / 2) + (len % 2))
+		while ((*s)->content != a)
+			rotate(s, NULL, RB);
+	else
+		while ((*s)->content != a)
+			rev_rotate(s, NULL, RRB);
 }
 
 int	get_sup(t_list *s, int a)
