@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 22:34:21 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/27 22:42:59 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/03 22:14:32 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	error_msg(char	*msg, t_list *a, t_list *b)
 {
 	if (msg)
-		ft_printf("%s\n", msg);
+		ft_putendl_fd(msg, 2);
 	if (a)
 		ft_lstclear(&a, NULL);
 	if (b)

@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 01:08:32 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/03 04:28:46 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/07 18:25:49 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,19 @@ t_chunk	def_chunk(int chunk_count, t_list *a, size_t len)
 	return (chunk);
 }
 
+static int	ft_abs(int a)
+{
+	if (a < 0)
+		return (-a);
+	return (a);
+}
 
 static void	push_best(t_list *first, t_list *last, t_list **a, t_list **b)
 {
 	if (!first || !last)
 		return ;
-	if (count_put_on_top(*a, first->content)
-		< count_put_on_top(*a, last->content))
+	if (ft_abs(count_put_on_top(*a, first->content))
+		< ft_abs(count_put_on_top(*a, last->content)))
 		put_nb_top_a(a, first->content);
 	else
 		put_nb_top_a(a, last->content);

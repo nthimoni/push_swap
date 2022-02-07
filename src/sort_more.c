@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:35:05 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/03 05:41:41 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/07 19:15:10 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,19 @@ static void	sort_small(t_list **a, t_list **b)
 		insert_fastest_a(a, b);
 }
 
-static void sort_big(t_list **a, t_list **b, size_t len, int chunk_count)
+static void sort_big(t_list **a, t_list **b)
 {
-	int		i;
-	t_chunk	chunk;
+	int i;
+	t_chunk chunk;
 
-	chunk = def_chunk(chunk_count, *a, len);
 	i = 0;
-	while (i < chunk.chunk_count)
+	while ((*a)->next->next)
 	{
-		push_chunk_b(chunk.chunk[i], chunk.chunk[i + 1], a, b);
+		chunk = def_chunk(2, *a, ft_lstsize(*a));
+		push_chunk_b(chunk.chunk[0], chunk.chunk[1], a, b);
 		i++;
 	}
+	push_chunk_b(chunk.chunk[1], chunk.chunk[2], a, b);
 	push(b, a, PA);
 	while (*b)
 		insert_fastest_a(a, b);
@@ -43,10 +44,8 @@ static void sort_big(t_list **a, t_list **b, size_t len, int chunk_count)
 
 void	sort_more(t_list **a, t_list **b, size_t len)
 {
-	if (len >= 500)
-		sort_big(a, b, len, 2);
-	else if (len > 100)
-		sort_big(a, b, len, 1);
+	if (len > 100)
+		sort_big(a, b);
 	else
 		sort_small(a, b);
 	put_nb_top_a(a, find_min(*a));	
