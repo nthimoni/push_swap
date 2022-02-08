@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:35:20 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/03 22:11:42 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/08 19:54:15 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,15 @@ void	print_st(t_list *a, t_list *b)
 	ft_printf("\n");
 }
 
+void	operation(char	*op)
+{
+	
+}
+
 int main(int argc, char *argv[])
 {
 	t_list	*a;
 	t_list	*b;
-	size_t	len;
 
 	a = NULL;
 	b = NULL;
