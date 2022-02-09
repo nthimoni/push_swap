@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:37:26 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 03:55:16 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/09 06:30:28 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	push(t_list **from, t_list **to, int op)
 {
 	t_list *tmp;
 
+	if (!*from)
+		return ;
 	tmp = (*from)->next;
 	ft_lstadd_front(to, *from);
 	*from = tmp;

@@ -1,0 +1,465 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-msys
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Wed Feb  9 07:26:47 2022
+
+# Variables
+
+# environment
+SYSTEMDRIVE = C:
+# environment
+LC_ALL = C
+# makefile (from 'Makefile', line 2)
+OBJDIR = bin/
+# environment
+USERPROFILE = C:\Users\thimo
+# environment
+VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
+# makefile (from 'Makefile', line 22)
+LINK = -lft 
+# environment
+LOCALAPPDATA = C:\Users\thimo\AppData\Local
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-92331581-9e15-4fed-b351-e488ddeea7ff-sock
+# environment
+WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
+# environment
+VSCODE_CWD = C:\Users\thimo\OneDrive\Desktop\C++DEV\push_swap
+ 
+# environment
+SYSTEMROOT = C:\WINDOWS
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := make
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_1188_IAVHJXRNFQTRUYBD
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\thimo\AppData\Roaming\Code\CachedData\d6ee99e4c045a6716e5c653d7da8e9ae6f5a8b03
+# makefile (from 'Makefile', line 6)
+LIBFT = $(FTPATH)libft.a
+# environment
+LANG = C
+# default
+.LOADED := 
+# environment
+TMP = /c/Users/thimo/AppData/Local/Temp
+# default
+.INCLUDE_DIRS = /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\thimo\OneDrive
+# makefile
+CURDIR := /c/Users/thimo/OneDrive/Desktop/C++DEV/push_swap
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# makefile (from 'Makefile', line 8)
+SRCS = main.c parse.c error.c buffer.c sort_five.c adv_operations.c operations.c sort_more.c insert_fastest.c chunk.c
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+PROGRAMFILES = C:\Program Files
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+!C: = c:\Users\thimo\OneDrive\Desktop\C++DEV\push_swap
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 1188
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 4)
+FTPATH = libft/
+# environment
+ONLINESERVICES = Online Services
+# environment
+WT_PROFILE_ID = {2c4de342-38b7-51cf-b940-2309a097f518}
+# automatic
+*F = $(notdir $*)
+# makefile (from 'Makefile', line 5)
+FTINC = $(FTPATH)include/
+# makefile (from 'Makefile', line 24)
+LIBPATH = -L$(FTPATH) 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVECONSUMER = C:\Users\thimo\OneDrive
+# default
+MAKE_HOST := x86_64-pc-msys
+# makefile (from 'Makefile', line 18)
+OBJS = $(addprefix $(OBJDIR),$(SRCS:.c=.o))
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := /bin/sh
+# environment
+HOMEPATH = \Users\thimo
+# default
+MAKECMDGOALS := all
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /c/Program Files/Common Files/Oracle/Java/javapath:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/windows/system32:/c/windows:/c/windows/System32/Wbem:/c/windows/System32/WindowsPowerShell/v1.0:/c/windows/System32/OpenSSH:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Git/cmd:/c/Program Files/Java/jdk-17.0.1/bin:/c/Users/thimo/AppData/Local/Programs/Python/Python39/Scripts:/c/Users/thimo/AppData/Local/Programs/Python/Python39:/c/Users/thimo/AppData/Local/Microsoft/WindowsApps:/c/PyCharm Community Edition 2020.3.3/bin:/c/Users/thimo/AppData/Local/Programs/Microsoft VS Code/bin:/mingw64/bin:/usr/bin:/c/Program Files/Git/bin:/c/Program Files/LLVM/bin
+# environment
+COMPUTERNAME = LAPTOP-6QU1QIM5
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+PROMPT = $P$G
+# environment
+WT_SESSION = 77cce7c8-af27-4060-ae6f-7778bc2f4d46
+# environment
+LOGONSERVER = \\LAPTOP-6QU1QIM5
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = thimo
+# environment
+COMMONPROGRAMFILES = C:\Program Files\Common Files
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# makefile (from 'Makefile', line 25)
+NAME = push_swap
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERDOMAIN = LAPTOP-6QU1QIM5
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+OS = Windows_NT
+# makefile
+.DEFAULT_GOAL := all
+# default
+MAKE_VERSION := 4.3
+# environment
+PLATFORMCODE = KV
+# makefile (from 'Makefile', line 23)
+INCPATH = -I$(INCDIR) -I$(FTINC)
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# environment
+USERDOMAIN_ROAMINGPROFILE = LAPTOP-6QU1QIM5
+# environment
+NUMBER_OF_PROCESSORS = 16
+# environment
+PUBLIC = C:\Users\Public
+# environment
+APPDATA = C:\Users\thimo\AppData\Roaming
+# makefile (from 'Makefile', line 21)
+CFLAGS = -Wall -Wextra -Werror
+# environment
+HOMEDRIVE = C:
+# environment
+PROCESSOR_ARCHITECTURE = AMD64
+# environment
+PYCHARM COMMUNITY EDITION = C:\PyCharm Community Edition 2020.3.3\bin;
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/thimo
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# makefile (from 'Makefile', line 3)
+INCDIR = include/
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = /c/Users/thimo/AppData/Local/Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\cae4aff917936f135c2681683d1dcff2-1.64.1-main-sock
+# environment
+TERM = xterm-256color
+# makefile (from 'Makefile', line 1)
+SRCDIR = src/
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+REGIONCODE = EMEA
+# environment
+PROCESSOR_REVISION = a502
+# makefile (from 'Makefile', line 20)
+CC = clang -g
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+# variable set hash-table stats:
+# Load=118/1024=12%, Rehash=0, Collisions=23/166=14%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# src (device 3400437966, inode 4503599627435119): 11 files, no impossibilities so far.
+# . (device 3400437966, inode 42502721483345939): 17 files, no impossibilities.
+
+# 28 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+bin/%.o: src/%.c
+#  recipe to execute (from 'Makefile', line 33):
+	$(CC) -c $(CFLAGS) $(INCPATH) $< -o $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+ 
+bin/error.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bin/sort_five.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/main.o: src/main.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-02-09 07:16:33.2901406
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 33):
+	$(CC) -c $(CFLAGS) $(INCPATH) $< -o $@
+
+# Not a target:
+bin/insert_fastest.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+bin/buffer.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-09 02:14:06.7240282
+#  File has been updated.
+#  Successfully updated.
+
+libft/libft.a:
+#  Implicit rule search has not been done.
+#  Last modified 2022-02-09 02:14:06.9497085
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 36):
+	make -C $(FTPATH)
+
+bin/parse.o: src/parse.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'parse'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := bin/parse.o
+# automatic
+# * := parse
+# automatic
+# < := src/parse.c
+# automatic
+# + := src/parse.c
+# automatic
+# % := 
+# automatic
+# ^ := src/parse.c
+# automatic
+# ? := src/parse.c
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=4/19=21%
+#  recipe to execute (from 'Makefile', line 33):
+	$(CC) -c $(CFLAGS) $(INCPATH) $< -o $@
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 39):
+	rm -rf $(OBJS)
+
+# Not a target:
+bin/sort_more.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/parse.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-09 02:14:07.2071329
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+bin/operations.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-09 02:14:07.2016759
+#  File has been updated.
+#  Successfully updated.
+
+re: fclean push_swap
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+bin/adv_operations.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: push_swap
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/9=0%
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 42):
+	#make fclean -C $(FTPATH)
+	rm -f $(NAME)
+
+# Not a target:
+bin/chunk.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+push_swap: libft/libft.a bin/main.o bin/parse.o bin/error.o bin/buffer.o bin/sort_five.o bin/adv_operations.o bin/operations.o bin/sort_more.o bin/insert_fastest.o bin/chunk.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-02-09 07:16:33.9636773
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/9=0%
+#  recipe to execute (from 'Makefile', line 30):
+	$(CC) $(OBJS) $(LIBPATH) $(LINK) -o $(NAME)
+
+libft:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+.PHONY: all libft clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=23/1024=2%, Rehash=0, Collisions=0/62=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 50 / storage = 527 B / avg = 10 B
+# current buf: size = 8162 B / used = 527 B / count = 50 / avg = 10 B
+
+# strcache performance: lookups = 79 / hit rate = 36%
+# hash-table stats:
+# Load=50/8192=1%, Rehash=0, Collisions=0/79=0%
+# Finished Make data base on Wed Feb  9 07:26:47 2022
+
+ 

@@ -1,0 +1,14 @@
+make.exe --dry-run --keep-going --print-directory
+make: Entering directory '/c/Users/thimo/OneDrive/Desktop/C++DEV/push_swap'
+clang -g -c -Wall -Wextra -Werror -Iinclude/ -Ilibft/include/ src/parse.c -o bin/parse.o
+ 
+clang -g -c -Wall -Wextra -Werror -Iinclude/ -Ilibft/include/ src/error.c -o bin/error.o
+ 
+clang -g -c -Wall -Wextra -Werror -Iinclude/ -Ilibft/include/ src/buffer.c -o bin/buffer.o
+ 
+clang -g -c -Wall -Wextra -Werror -Iinclude/ -Ilibft/include/ src/adv_operations.c -o bin/adv_operations.o
+clang -g -c -Wall -Wextra -Werror -Iinclude/ -Ilibft/include/ src/operations.c -o bin/operations.o
+ 
+clang -g bin/main.o bin/parse.o bin/error.o bin/buffer.o bin/sort_five.o bin/adv_operations.o bin/operations.o bin/sort_more.o bin/insert_fastest.o bin/chunk.o -Llibft/  -lft  -o push_swap
+make: Leaving directory '/c/Users/thimo/OneDrive/Desktop/C++DEV/push_swap'
+ 
