@@ -17,7 +17,7 @@ SRCS = main.c\
 		chunk.c
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.c=.o))
 #####################################################################
-CC = clang -g
+CC = gcc -g
 CFLAGS = -Wall -Wextra -Werror
 LINK = -lft 
 INCPATH = -I$(INCDIR) -I$(FTINC)
@@ -34,6 +34,10 @@ $(OBJDIR)%.o: $(SRCDIR)%.c
 
 $(LIBFT):
 	make -C $(FTPATH)
+
+checker:
+	make -C checker-dir/
+	cp checker-dir/checker .
 
 clean:
 	rm -rf $(OBJS)

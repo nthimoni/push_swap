@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 17:34:50 by nthimoni          #+#    #+#             */
-/*   Updated: 2021/12/12 19:58:13 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/09 19:14:57 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	print_x(int i, t_flags *flags)
 {	
 	size_t	len;
 	int		prefix;
-	int		isprec;
 
 	if (!i && flags->dot == 0)
 	{
@@ -40,12 +39,9 @@ void	print_x(int i, t_flags *flags)
 		return ;
 	}
 	prefix = 0;
-	isprec = 0;
 	if (flags->diez && i != 0)
 		prefix = 2;
 	len = ui_len((unsigned int)i, 16);
-	if (flags->dot != -1)
-		isprec = 1;
 	reg_dot(flags, len);
 	print_before(flags, len, i, prefix);
 	if (flags->type == 'x')

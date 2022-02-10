@@ -6,7 +6,7 @@
 /*   By: nthimoni <nthimoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 07:10:51 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/09 07:18:31 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/09 19:05:28 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,25 +35,21 @@ void	print_st(t_list *a, t_list *b)
 
 void	operation(char	*op, t_list **a, t_list **b)
 {
-	int	len;
-
-	len = ft_strlen(op) - 1;
-	ft_printf(" %d \n", !ft_strncmp(op, "rr", len));
-	if (!ft_strncmp(op, "ra", len) || !ft_strncmp(op, "rr", len))
+	if (!ft_strncmp(op, "ra", 5) || !ft_strncmp(op, "rr",5))
 		rotate(a, NULL, -5);
-	if (!ft_strncmp(op, "rb", len) || !ft_strncmp(op, "rr", len))
+	if (!ft_strncmp(op, "rb", 5) || !ft_strncmp(op, "rr", 5))
 		rotate(b, NULL, -5);
-	if (!ft_strncmp(op, "rra", len) || !ft_strncmp(op, "rrr", len))
+	if (!ft_strncmp(op, "rra", 5) || !ft_strncmp(op, "rrr", 5))
 		rev_rotate(a, NULL, -5);
-	if (!ft_strncmp(op, "rrb", len) || !ft_strncmp(op, "rrr", len))
+	if (!ft_strncmp(op, "rrb", 5) || !ft_strncmp(op, "rrr", 5))
 		rev_rotate(b, NULL, -5);
-	if (!ft_strncmp(op, "sa", len) || !ft_strncmp(op, "ss", len))
+	if (!ft_strncmp(op, "sa", 5) || !ft_strncmp(op, "ss", 5))
 		swap(*a, NULL, -5);
-	if (!ft_strncmp(op, "sb", len) || !ft_strncmp(op, "ss", len))
+	if (!ft_strncmp(op, "sb", 5) || !ft_strncmp(op, "ss", 5))
 		swap(*b, NULL, -5);
-	if (!ft_strncmp(op, "pa", len))
+	if (!ft_strncmp(op, "pa", 5))
 		push(b, a, -5);
-	if (!ft_strncmp(op, "pb", len))
+	if (!ft_strncmp(op, "pb", 5))
 		push(a, b, -5);
 }
 
@@ -92,9 +88,9 @@ int main(int argc, char *argv[])
 	line = get_next_line(0);
 	while (line)
 	{
+		line[ft_strlen(line) - 1] = 0;
 		operation(line, &a, &b);
 		free(line);
-		print_st(a, b);
 		line = get_next_line(0);
 	}
 	verdict(&a, &b);

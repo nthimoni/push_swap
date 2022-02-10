@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "C:/Users/thimo/OneDrive/Desktop/C++DEV/push_swap/checker-dir/checker",
+            "program": "/mnt/nfs/homes/nthimoni/Desktop/projects42/C/push_swap/checker-dir/checker",
             "args": ["0", "5", "7", "-1", "-6"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

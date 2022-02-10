@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 17:06:34 by nthimoni          #+#    #+#             */
-/*   Updated: 2021/12/12 19:59:48 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/09 19:14:17 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,6 @@ static void	print_before(t_flags *flags, unsigned int len)
 
 void	print_u(unsigned int u, t_flags *flags)
 {
-	int		i;
 	size_t	len;
 
 	if (!u && flags->dot == 0)
@@ -84,7 +83,6 @@ void	print_u(unsigned int u, t_flags *flags)
 	}
 	len = ui_len(u, 10);
 	reg_dot(flags, len);
-	i = 0;
 	print_before(flags, len);
 	print_ui_base(u, BASE_10);
 	if (flags->minus)
