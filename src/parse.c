@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:55:05 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/28 23:37:03 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:12:29 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "constantes.h"
 #include <limits.h>
 
-static int is_valid(char *s)
+static int	is_valid(char *s)
 {
 	int		i;
 	size_t	len;

@@ -6,14 +6,14 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 18:19:13 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/03 03:32:42 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:20:50 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef OPERATIONS_H
 # define OPERATIONS_H
 
-#include "libft.h"
+# include "libft.h"
 
 void	swap(t_list *a, t_list *b, int op);
 void	push(t_list **from, t_list **tpush, int op);

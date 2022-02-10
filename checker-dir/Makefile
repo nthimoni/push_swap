@@ -13,7 +13,7 @@ SRCS = checker/main.c\
 		operations.c
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.c=.o))
 #####################################################################
-CC = clang -g
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 LINK = -lft 
 INCPATH = -I$(INCDIR) -I$(FTINC)

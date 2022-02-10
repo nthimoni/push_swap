@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 19:57:03 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/03 04:03:31 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:12:46 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	count_put_on_top(t_list *s, int a)
 	}
 }
 
-t_rotbuf insert_move_count(t_list **from, t_list **to, int val)
+t_rotbuf	insert_move_count(t_list **from, t_list **to, int val)
 {
 	int			count_from;
 	int			count_to;

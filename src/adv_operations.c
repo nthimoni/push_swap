@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 22:53:21 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 19:34:03 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:14:01 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	find_max(t_list *s)
 		s = s->next;
 	}
 	return (max);
-
 }
 
 int	find_min(t_list *s)
@@ -89,8 +88,8 @@ void	put_nb_top_b(t_list **s, int a)
 
 int	get_sup(t_list *s, int a)
 {
-	int sup;
-	int min;
+	int	sup;
+	int	min;
 	int	max;
 
 	min = find_min(s);

@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 02:40:56 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 17:31:18 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:15:02 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static void	print_op(int a)
 void	opti_buf(int *buffer)
 {
 	int	i;
-	int opti;
+	int	opti;
 
 	i = 0;
 	while (i < SWAP_BUF_SIZE - 1 && buffer[i] && buffer[i + 1])
@@ -94,7 +94,8 @@ void	opti_buf(int *buffer)
 		if (opti > 0)
 		{
 			buffer[i] = opti;
-			ft_memmove(buffer + i + 1, buffer + i + 2, (SWAP_BUF_SIZE - i - 2) * 4);
+			ft_memmove(buffer + i + 1, buffer + i + 2,
+				(SWAP_BUF_SIZE - i - 2) * 4);
 			buffer[SWAP_BUF_SIZE - 1] = 0;
 			i -= 2;
 		}

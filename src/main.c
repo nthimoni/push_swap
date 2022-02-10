@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:35:20 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 19:38:00 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:16:13 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include "operations.h"
 #include "sort.h"
 #include "buffer.h"
-
 
 void	print(int a)
 {
@@ -31,10 +30,9 @@ void	print_st(t_list *a, t_list *b)
 	ft_printf("b : ");
 	ft_lstiter(b, print);
 	ft_printf("\n");
-
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	t_list	*a;
 	t_list	*b;
@@ -53,5 +51,5 @@ int main(int argc, char *argv[])
 		sort_more(&a, &b, len);
 	put_buff(FLUSH);
 	ft_lstclear(&a, NULL);
-	ft_lstclear(&b, NULL);	
+	ft_lstclear(&b, NULL);
 }

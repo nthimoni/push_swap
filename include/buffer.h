@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 03:16:58 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/07 18:39:31 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:21:15 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ void	put_buff(int op);
 typedef struct s_rotbuf
 {
 	int	r_from;
-	int r_to;
-	int rr_from;
-	int rr_to;
+	int	r_to;
+	int	rr_from;
+	int	rr_to;
 }	t_rotbuf;
 
 #endif

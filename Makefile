@@ -17,7 +17,7 @@ SRCS = main.c\
 		chunk.c
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.c=.o))
 #####################################################################
-CC = gcc -g
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 LINK = -lft 
 INCPATH = -I$(INCDIR) -I$(FTINC)
@@ -43,7 +43,7 @@ clean:
 	rm -rf $(OBJS)
 
 fclean: clean
-	#make fclean -C $(FTPATH)
+	make fclean -C $(FTPATH)
 	rm -f $(NAME)
 
 re: fclean $(NAME)

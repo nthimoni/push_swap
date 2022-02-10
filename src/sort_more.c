@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:35:05 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/07 19:15:10 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:18:17 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ static void	sort_small(t_list **a, t_list **b)
 		insert_fastest_a(a, b);
 }
 
-static void sort_big(t_list **a, t_list **b)
+static void	sort_big(t_list **a, t_list **b)
 {
-	int i;
-	t_chunk chunk;
+	int		i;
+	t_chunk	chunk;
 
 	i = 0;
 	while ((*a)->next->next)
@@ -41,12 +41,11 @@ static void sort_big(t_list **a, t_list **b)
 		insert_fastest_a(a, b);
 }
 
-
 void	sort_more(t_list **a, t_list **b, size_t len)
 {
 	if (len > 100)
 		sort_big(a, b);
 	else
 		sort_small(a, b);
-	put_nb_top_a(a, find_min(*a));	
+	put_nb_top_a(a, find_min(*a));
 }

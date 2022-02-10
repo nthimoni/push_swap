@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 17:37:26 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/09 06:30:28 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:12:04 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	swap(t_list *s1, t_list *s2, int op)
 
 void	push(t_list **from, t_list **to, int op)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (!*from)
 		return ;

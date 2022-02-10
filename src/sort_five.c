@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 20:45:34 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/01 16:50:32 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/02/10 20:11:38 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include "buffer.h"
 #include "libft.h"
 
-static	void	put_largest_bottom(t_list **a)
+static void	put_largest_bottom(t_list **a)
 {
-	if ((*a)->content > (*a)->next->content 
+	if ((*a)->content > (*a)->next->content
 		&& (*a)->content > (*a)->next->next->content)
 		rotate(a, NULL, RA);
-	else if ((*a)->content < (*a)->next->content 
+	else if ((*a)->content < (*a)->next->content
 		&& (*a)->next->content > (*a)->next->next->content)
 		rev_rotate(a, NULL, RRA);
 }
