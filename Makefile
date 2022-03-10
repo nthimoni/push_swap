@@ -18,7 +18,7 @@ SRCS = main.c\
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.c=.o))
 #####################################################################
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 LINK = -lft 
 INCPATH = -I$(INCDIR) -I$(FTINC)
 LIBPATH = -L$(FTPATH) 

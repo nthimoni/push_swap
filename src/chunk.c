@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 01:08:32 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/07 18:25:49 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/03/10 22:41:57 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ t_chunk	def_chunk(int chunk_count, t_list *a, size_t len)
 
 	chunk.chunk_count = chunk_count;
 	chunk.chunk = malloc(sizeof(int) * (chunk_count + 1));
+	if (!chunk.chunk)
+		return ((t_chunk){-1, NULL});
 	chunk.chunk[0] = find_min(a);
 	chunk.chunk[chunk_count] = find_max(a);
 	i = 1;
