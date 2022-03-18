@@ -6,7 +6,7 @@
 /*   By: nthimoni <nthimoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 07:10:51 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/02/10 20:20:37 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/03/18 02:42:12 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,39 +17,42 @@
 #include "sort.h"
 #include "buffer.h"
 
-void	print(int a)
-{
-	ft_printf("%d ", a);
-}
-
-void	print_st(t_list *a, t_list *b)
-{
-	ft_printf("a : ");
-	ft_lstiter(a, print);
-	ft_printf("\n");
-	ft_printf("b : ");
-	ft_lstiter(b, print);
-	ft_printf("\n");
+void	quit(char *op, t_list **a, t_list **b, char *msg)
+{	
+	ft_lstclear(a, NULL);
+	ft_lstclear(b, NULL);
+	free(op);
+	if (msg)
+		ft_printf("%s", msg);
+	exit(-1);
 }
 
 void	operation(char	*op, t_list **a, t_list **b)
 {
-	if (!ft_strncmp(op, "ra", 5) || !ft_strncmp(op, "rr", 5))
+	if (!ft_strncmp(op, "rr", 5))
+		rotate(a, b, -5);
+	else if (!ft_strncmp(op, "ra", 5))
 		rotate(a, NULL, -5);
-	if (!ft_strncmp(op, "rb", 5) || !ft_strncmp(op, "rr", 5))
+	else if (!ft_strncmp(op, "rb", 5))
 		rotate(b, NULL, -5);
-	if (!ft_strncmp(op, "rra", 5) || !ft_strncmp(op, "rrr", 5))
+	else if (!ft_strncmp(op, "rrr", 5))
+		rev_rotate(a, b, -5);
+	else if (!ft_strncmp(op, "rra", 5))
 		rev_rotate(a, NULL, -5);
-	if (!ft_strncmp(op, "rrb", 5) || !ft_strncmp(op, "rrr", 5))
+	else if (!ft_strncmp(op, "rrb", 5))
 		rev_rotate(b, NULL, -5);
-	if (!ft_strncmp(op, "sa", 5) || !ft_strncmp(op, "ss", 5))
+	else if (!ft_strncmp(op, "sa", 5))
 		swap(*a, NULL, -5);
-	if (!ft_strncmp(op, "sb", 5) || !ft_strncmp(op, "ss", 5))
+	else if (!ft_strncmp(op, "sb", 5))
 		swap(*b, NULL, -5);
-	if (!ft_strncmp(op, "pa", 5))
+	else if (!ft_strncmp(op, "ss", 5))
+		swap(*b, *a, -5);
+	else if (!ft_strncmp(op, "pa", 5))
 		push(b, a, -5);
-	if (!ft_strncmp(op, "pb", 5))
+	else if (!ft_strncmp(op, "pb", 5))
 		push(a, b, -5);
+	else
+		quit(op, a, b, "Error");
 }
 
 void	verdict(t_list **a, t_list **b)

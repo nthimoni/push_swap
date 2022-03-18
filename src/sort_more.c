@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:35:05 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/03/10 22:58:13 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/03/18 02:45:54 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ static void	sort_big(t_list **a, t_list **b)
 	t_chunk	chunk;
 
 	i = 0;
-	while ((*a)->next->next)
+	while ((*a)->next && (*a)->next->next)
 	{
 		chunk = def_chunk(2, *a, ft_lstsize(*a));
 		if (!chunk.chunk)
 			return ;
 		push_chunk_b(chunk.chunk[0], chunk.chunk[1], a, b);
-		if ((*a)->next->next)
+		if ((*a)->next && (*a)->next->next)
 			free(chunk.chunk);
 		i++;
 	}

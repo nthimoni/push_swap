@@ -6,7 +6,7 @@
 /*   By: nthimoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 14:23:37 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/01/11 02:34:54 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/03/18 02:54:09 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ char	*get_next_line(int fd)
 	}
 	free(buffer);
 	ret = parse(&prev[fd]);
-	if (!ret)
+	if (!ret || !*(prev[fd]))
 		free_ptr((void *)&prev[fd]);
 	return (ret);
 }
