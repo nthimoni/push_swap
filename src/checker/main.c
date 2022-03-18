@@ -6,7 +6,7 @@
 /*   By: nthimoni <nthimoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 07:10:51 by nthimoni          #+#    #+#             */
-/*   Updated: 2022/03/18 02:42:12 by nthimoni         ###   ########.fr       */
+/*   Updated: 2022/03/18 06:49:09 by nthimoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	operation(char	*op, t_list **a, t_list **b)
 	else if (!ft_strncmp(op, "pb", 5))
 		push(a, b, -5);
 	else
-		quit(op, a, b, "Error");
+		quit(op, a, b, "Error\n");
 }
 
 void	verdict(t_list **a, t_list **b)
