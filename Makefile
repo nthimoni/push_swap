@@ -45,6 +45,7 @@ clean:
 fclean: clean
 	make fclean -C $(FTPATH)
 	rm -f $(NAME)
+	rm -f checker
 
 re: fclean $(NAME)
 
